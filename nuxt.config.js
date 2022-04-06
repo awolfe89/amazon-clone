@@ -51,10 +51,12 @@ export default {
           dark: "#131921",
           accent: "#FEBD68",
           secondary: "#364759",
-          info: "#EAEDED",
+          background: "#EAEDED",
           warning: "#E87D00",
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          success: colors.green.accent3,
+          bright: '#FBD407',
+          ablue: '#027085'
         }
       }
     }
