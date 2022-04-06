@@ -1,17 +1,17 @@
 <template>
   <v-container fluid>
-    <v-row class="py-2 dark" >
+    <v-row class="py-2 dark">
       <v-app-bar flat class="dark py-2 my-2">
-          <v-col cols="2" class="px-0">
-              <v-toolbar-title class="px-0">AMAZON</v-toolbar-title>
+          <v-col cols="1" class="px-0">
+              <v-card-title>AMAZON</v-card-title>
           </v-col>
-          <v-col cols="2" class="px-0">
+          <v-col cols="1" class="px-0">
             <v-card-text class="font-weight-bold">
               <v-icon>mdi-google-maps</v-icon>
               Select Your Address
             </v-card-text>
           </v-col>
-          <v-col cols="4">
+          <v-col cols="6">
             <v-text-field 
               outlined 
               placeholder="search" 
@@ -19,13 +19,19 @@
               class="mt-2"
               />
           </v-col>
+          
           <v-col cols="2">
             <v-card-text class="my-0 py-0">Hello, sign in</v-card-text>
             <v-card-text class="my-0 py-0 font-weight-bold">Account & Lists</v-card-text>
           </v-col>
           <v-col cols="2">
+            <v-card-text class="my-0 py-0">Returns</v-card-text>
+            <v-card-text class="my-0 py-0 font-weight-bold">& Orders</v-card-text>
+          </v-col>
+          <v-col cols="2">
             <v-button icon>
               <v-icon color="warning" large>mdi-cart-outline</v-icon>
+           <span>Cart</span>
             </v-button>
           </v-col>
       </v-app-bar>
