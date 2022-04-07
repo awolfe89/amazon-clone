@@ -1,6 +1,5 @@
 <template>
-<v-card flat class="white mt-10">
-  <v-row class="white pt-2 mx-2">
+  <v-row class="white pt-2" no-gutters>
     <v-card-text class="pb-0 display-1 black--text">Most Wished For</v-card-text>
     <v-slide-group
       v-model="model"
@@ -38,7 +37,7 @@
       </v-slide-item>
     </v-slide-group>
   </v-row>
-</v-card>
+
 </template>
 
 <script>

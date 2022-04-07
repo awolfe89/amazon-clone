@@ -6,8 +6,9 @@
               <v-card-title>AMAZON</v-card-title>
           </v-col>
           <v-col cols="12" lg='1' md='2' sm="4" class="px-0">
-            <v-card-text class="font-weight-bold">
-              <v-icon>mdi-google-maps</v-icon>
+            <v-card-subtitle class="grey--text subtitle-2 pb-0 ml-5">Hello</v-card-subtitle>
+            <v-card-text class="font-weight-bold mt-0 pt-0">
+              <v-icon small>mdi-google-maps</v-icon>
               Select Your Address
             </v-card-text>
           </v-col>
@@ -53,6 +54,7 @@
       app
       temporary
       clipped-left="clipped"
+      class="white black--text"
     >
       <MainMenu />
     </v-navigation-drawer>

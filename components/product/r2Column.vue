@@ -1,10 +1,10 @@
 <template>
   <v-card class="white" flat>
     <v-card-title class="black--text">Product Title</v-card-title>
-    <v-card-subtitle class="black--text">Brand: brand</v-card-subtitle>
+    <v-card-subtitle class="ablue--text pt-0">Brand: brand</v-card-subtitle>
     <v-divider class="background" />
     <v-card-title class="black--text">$00.00</v-card-title>
-    <v-card-subtitle class="black--text">& <span class="ablue--text">FREE Returns</span> </v-card-subtitle>
+    <v-card-subtitle class="black--text font-weight-bold">& <span class="ablue--text">FREE Returns</span> </v-card-subtitle>
     <v-card-subtitle class="ablue--text font-weight-bold">
       Pay $21.58/month for 12 months, interest-free upon approval for the Amazon Rewards Visa Card
     </v-card-subtitle>
@@ -34,6 +34,7 @@
           <v-img
               src="https://picsum.photos/510/300?random"
               aspect-ratio="1.7"
+              class="ml-2"
             />
         </v-col>
         <v-col cols="12" lg="8">

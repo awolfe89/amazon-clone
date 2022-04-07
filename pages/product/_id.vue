@@ -10,7 +10,7 @@
       <v-col cols="12" lg="3">
         <v-img
           src="https://picsum.photos/510/300?random"
-          aspect-ratio="1.7"
+          contain
         />
       </v-col>
       <!-- TEXT --> 
