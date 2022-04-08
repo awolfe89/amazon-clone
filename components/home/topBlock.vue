@@ -48,7 +48,7 @@
           Sign in for the best experience
         </v-card-text>
         <v-row no-gutters class="pb-10 d-flex justify-center">
-            <v-btn class=" black--text" large color="bright">Sign in securely</v-btn>
+            <v-btn class=" black--text" large color="bright" to="/auth/signup">Sign in securely</v-btn>
         </v-row>
         
       </v-card>

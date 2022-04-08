@@ -2,10 +2,17 @@
   <v-container fluid class="dark">
     <v-row class="dark" dense no-gutters>
       <v-app-bar flat class="dark py-2 my-2">
-          <v-col cols="12" lg='1' md='2' sm="4" class="px-0">
-              <v-card-title>AMAZON</v-card-title>
+          <v-col cols="12" lg='1' md='3' sm="4" class="px-0" >
+            <nuxt-link to="/">
+              <v-card-title 
+                class="white--text text-decoration-none pa-0"
+              >
+                AMAZON
+              </v-card-title>
+            </nuxt-link>
+              
           </v-col>
-          <v-col cols="12" lg='1' md='2' sm="4" class="px-0">
+          <v-col cols="12" lg='1' md='3' sm="4" class="px-0" @click="chooseLocationDialog = true">
             <v-card-subtitle class="grey--text subtitle-2 pb-0 ml-5">Hello</v-card-subtitle>
             <v-card-text class="font-weight-bold mt-0 pt-0">
               <v-icon small>mdi-google-maps</v-icon>
@@ -30,7 +37,7 @@
             <v-card-text class="my-0 py-0 font-weight-bold">& Orders</v-card-text>
           </v-col>
           <v-col cols="1" class="px-0">
-            <v-button icon>
+            <v-button icon  @click="$router.push('/cart')">
               <v-icon color="warning" large>mdi-cart-outline</v-icon>
            <span>Cart</span>
             </v-button>
@@ -58,18 +65,31 @@
     >
       <MainMenu />
     </v-navigation-drawer>
+    <!-- CHOOSE LOCATION DIALOG --> 
+    <v-dialog 
+      max-width="500" 
+      v-model="chooseLocationDialog"
+    >
+      <ChooseLocation 
+        @closeLocation="closeLocationDialog()"
+      />
+    </v-dialog>
   </v-container>
 </template>
 
 <script>
 import MainMenu from '../navigation/mainMenu'
+import ChooseLocation from '../navigation/chooseLocation'
 export default {
   components: {
-    MainMenu
+    MainMenu,
+    ChooseLocation
   },
   data() {
     return {
       drawer: false,
+      chooseLocationDialog: false,
+
       menu: [
         {
           name: "Best Sellers"
@@ -122,6 +142,11 @@ export default {
       ],
 
     }
+  },
+  methods: {
+    closeLocationDialog(){
+      this.chooseLocationDialog = false
+    },
   }
 }
 </script>

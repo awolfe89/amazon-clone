@@ -16,6 +16,20 @@
           <v-card-subtitle class="ablue--text">
             Shop today's deals
           </v-card-subtitle>
+          <v-row class="mt-1 mx-4">
+            <v-btn 
+              class="bright black--text mx-2"
+              @click="$router.push('/auth/signin')"
+            >
+              sign in to your account
+            </v-btn>
+            <v-btn 
+              class="background black--text"
+              @click="$router.push('/auth/signup')"
+            >
+              sign up now
+            </v-btn>
+          </v-row>
         </v-card>
       </v-col>
     </v-row>

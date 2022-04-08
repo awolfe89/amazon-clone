@@ -9,6 +9,7 @@
     </v-main>
     
     <Footer1 />
+    <Footer2 />
     <Footer />
   </v-app>
 </template>
@@ -17,12 +18,14 @@
 import TopBar from '../components/navigation/topBar.vue'
 import Footer from '../components/navigation/footer.vue'
 import Footer1 from '../components/navigation/footer1'
+import Footer2 from '../components/navigation/footer2'
 export default {
   name: 'DefaultLayout',
   components :{
     TopBar,
     Footer,
-    Footer1
+    Footer1,
+    Footer2,
   },
   data () {
     return {

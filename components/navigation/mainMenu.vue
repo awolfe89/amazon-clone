@@ -1,96 +1,49 @@
 <template>
   <v-card class="white" flat>
-    
-      <v-row class="primary my-1">
+      <v-row class="primary my-1 mt-0 pt-0">
         <v-card-title class="">
           <v-icon large class="mr-1">mdi-account-circle</v-icon>
           Hello, Sign In
         </v-card-title>
+        
       </v-row>
-
-      <v-list>
-      <v-list-item>
-        <v-list-item-icon>
-          <v-icon>mdi-home</v-icon>
-        </v-list-item-icon>
-
-        <v-list-item-title>Home</v-list-item-title>
-      </v-list-item>
-
-      <v-list-group
-        :value="true"
-        prepend-icon="mdi-account-circle"
-      >
-        <template v-slot:activator>
-          <v-list-item-title>Users</v-list-item-title>
-        </template>
-
-        <v-list-group
-          :value="true"
-          no-action
-          sub-group
+      <v-row v-for="menuItem in menu" :key="menuItem"  >
+        <v-card-title 
+          class="h6-text black--text"
+          
         >
-          <template v-slot:activator>
-            <v-list-item-content class="black--text">
-              <v-list-item-title>Admin</v-list-item-title>
-            </v-list-item-content>
-          </template>
-
-          <v-list-item
-            v-for="([title, icon], i) in admins"
-            :key="i"
-            link
-            class="black--text"
-          >
-            <v-list-item-title v-text="title" class="black--text"></v-list-item-title>
-
-            <v-list-item-icon>
-              <v-icon v-text="icon" color="black"></v-icon>
-            </v-list-item-icon>
-          </v-list-item>
-        </v-list-group>
-
-        <v-list-group
-          no-action
-          sub-group
+          {{menuItem.title}}
+        </v-card-title>
+        <v-card-text
+          class="black--text"
+          v-for="item in menuItem.subItem" :key="item"
         >
-          <template v-slot:activator>
-            <v-list-item-content  class="black--text">
-              <v-list-item-title>Actions</v-list-item-title>
-            </v-list-item-content>
-          </template>
-
-          <v-list-item
-            v-for="([title, icon], i) in cruds"
-            :key="i"
-            link
-            class="black--text"
-          >
-            <v-list-item-title class="black--text" v-text="title"></v-list-item-title>
-
-            <v-list-item-icon color="primary">
-              <v-icon v-text="icon" color="black"></v-icon>
-            </v-list-item-icon>
-          </v-list-item>
-        </v-list-group>
-      </v-list-group>
-    </v-list>
+          {{ item.title }}
+        </v-card-text>
+      </v-row>
   </v-card>
 </template>
 
 <script>
   export default {
     data: () => ({
-      admins: [
-        ['Management', 'mdi-account-multiple-outline'],
-        ['Settings', 'mdi-cog-outline'],
-      ],
-      cruds: [
-        ['Create', 'mdi-plus-outline'],
-        ['Read', 'mdi-file-outline'],
-        ['Update', 'mdi-update'],
-        ['Delete', 'mdi-delete'],
-      ],
+      menu: [
+        { title: 'Trending',
+          subItem: [{title: 'hi'}, {title: 'mre'}],
+        },
+        { title: 'Digital Content & Devices',
+          subItem: [{title: 'hi'}, {title: 'mre'}]
+        },
+        { title: 'Shop By Department',
+          
+        },
+        { title: 'Programs & Features',
+          
+        },
+        { title: 'Help & Settings',
+          
+        },
+      ]
     }),
   }
 </script>
